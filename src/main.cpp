@@ -2,10 +2,12 @@
 #include <DHT.h>
 #define DHTPIN 2
 #define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
 void setup() {
-// write your initialization code here
+    dht.begin();
+    Serial.println("DHT11 sensor initialized");
 }
 
 void loop() {
-// write your code here
+
 }
